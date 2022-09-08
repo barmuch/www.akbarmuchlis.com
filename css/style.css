@@ -1,0 +1,242 @@
+.slider h3 {
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(5, 5, 5), 0 0 5px rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.slider h5 {
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(5, 5, 5), 0 0 5px rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.parallax-container {
+  height: 40%;
+  padding: 3%;
+}
+
+.clients {
+  text-shadow: 2px 2px 2px black;
+}
+
+.parallax img {
+  filter: grayscale(1);
+}
+
+.clients img {
+  max-width: 200px;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
+}
+
+.services {
+  margin-top: -30px;
+  background-color: rgb(231, 231, 231);
+  padding-bottom: 4vh;
+}
+
+.services .row h3 {
+  padding: 25px;
+}
+
+/* Portfolio */
+
+#portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  margin-bottom: 10rem;
+}
+.container-portfolio {
+  position: relative;
+  width: 1160px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  margin: auto;
+}
+.container-portfolio .box {
+  position: relative;
+  width: 275px;
+  height: 275px;
+  background: #000;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  margin-top: 45px;
+  margin-right: 7px;
+  margin-left: 7px;
+}
+.container-portfolio:hover .box {
+  transform: rotateY(25deg);
+}
+.container-portfolio .box:hover ~ .box {
+  transform: rotateY(-25deg);
+}
+.container-portfolio .box:hover {
+  transform: rotateY(0deg) scale(1.25);
+  z-index: 1;
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+}
+.container-portfolio .box .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container-portfolio .box .imgBx:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(247, 247, 247), #00695c);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+.container-portfolio .box:hover .imgBx:before {
+  opacity: 1;
+}
+.container-portfolio .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-portfolio .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+.container-portfolio .box .content h2 {
+  color: #fff;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  transform: translateY(200px);
+  transition-delay: 0.3s;
+}
+.container-portfolio .box:hover .content h2 {
+  transform: translateY(0px);
+}
+.container-portfolio .box .content p {
+  color: #fff;
+  transition: 0.5s;
+  font-size: 14px;
+  transform: translateY(200px);
+  transition-delay: 0.4s;
+}
+.container-portfolio .box:hover .content p {
+  transform: translateY(0px);
+}
+
+section {
+  padding-top: 3rem;
+}
+
+/* Footer */
+footer {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-footer {
+  max-width: 1170px;
+  margin: auto;
+}
+.footer .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.footer {
+  background-color: #00695c;
+  padding: 70px 0;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
